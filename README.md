@@ -40,8 +40,8 @@ molecule test
 
 ## Copyright
 
-Copyright (c) 2016 Florian Heinle <launchpad@planet-tiax.de>
-Copyright (c) 2019 Ian Buchanan <ibuchanan@atlassian.com> (https://developer.atlassian.com/blog/authors/ibuchanan/)
+* Copyright (c) 2016 Florian Heinle <launchpad@planet-tiax.de>
+* Copyright (c) 2019 Ian Buchanan <ibuchanan@atlassian.com> (https://developer.atlassian.com/blog/authors/ibuchanan/)
 
 [MIT License](LICENSE) means
 you can do what you like with this software,
