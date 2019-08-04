@@ -86,28 +86,3 @@
     enabled=true
     state=started
   when: ansible_distribution == 'Debian'
-
-- name: install tor and polipo
-  become: true
-  apt:
-    name={{ item }}
-    update_cache=yes
-    cache_valid_time=3600
-  with_items:
-    - tor
-    - polipo
-
-- name: install polipo configuration
-  become: true
-  copy:
-    src=polipo.conf
-    dest=/etc/polipo/config
-    owner=root
-    group=root
-    mode=0644
-  notify:
-    - restart polipo
-
-- name: install ydl
-  include: ydl.yml
-  when: ansible_distribution == 'Debian' or ansible_lsb.major_release|int > 13

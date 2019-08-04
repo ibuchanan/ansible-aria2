@@ -1,17 +1,5 @@
 ---
 
-- name: reload daemons
-  become: true
-  command: systemctl daemon-reload
-
 - name: restart aria
   become: true
   service: name=aria2 state=restarted
-
-- name: restart polipo
-  become: true
-  service: name=polipo state=restarted
-
-- name: restart rpcserver
-  become: true
-  service: name=rpc_server state=restarted

@@ -1,0 +1,48 @@
+---
+dependency:
+  name: galaxy
+  enabled: false
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: aria2-ubuntu-xenial
+    image: ubuntu:xenial
+  - name: aria2-ubuntu-bionic
+    image: ubuntu:bionic
+  - name: aria2-ubuntu-disco
+    image: ubuntu:disco
+# TODO: can't detect debian major release
+#  - name: aria2-debian-jessie
+#    image: debian:jessie
+#  - name: aria2-debian-stretch
+#    image: debian:stretch
+#  - name: aria2-debian-buster
+#    image: debian:buster
+# TODO: try generic package because apt won't work for centos
+#  - name: aria2-centos-6
+#    image: centos:6
+#  - name: aria2-centos-7
+#    image: centos:7
+# TODO: fedora fails during image creation
+#  - name: aria2-fedora-29
+#    image: fedora:29
+#  - name: aria2-fedora-30
+#    image: fedora:7
+# TODO: try generic package because apt won't work for alpine
+#  - name: aria2-alpine-edge
+#    image: alpine:edge
+#  - name: aria2-alpine-latest
+#    image: alpine:latest
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
+    enabled: true

@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    # Covers defaults
+    - role: ansible-aria2
+      rpc_user: username
+      rpc_password: password
