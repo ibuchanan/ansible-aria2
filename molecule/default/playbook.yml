@@ -3,8 +3,6 @@
   hosts: all
   roles:
     # Covers defaults
-    - role: aria2
-    # Covers install
-    - role: aria2
-    # Covers downloading with aria2
-    - role: aria2
+    - role: ansible-aria2
+      rpc_user: username
+      rpc_password: password
