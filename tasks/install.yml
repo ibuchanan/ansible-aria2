@@ -1,0 +1,9 @@
+---
+# File: install.yml - Install aria2 package
+
+- name: apt install aria2
+  become: true
+  apt:
+    name=aria2
+    update_cache=yes
+    cache_valid_time=3600

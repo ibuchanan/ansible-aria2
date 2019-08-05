@@ -1,11 +1,7 @@
 ---
 
-- name: install aria2
-  become: true
-  apt:
-    name=aria2
-    update_cache=yes
-    cache_valid_time=3600
+- name: "install aria2"
+  import_tasks: install.yml
 
 - name: add shares group
   become: true
