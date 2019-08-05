@@ -28,7 +28,9 @@ For example, as a `playbook.yml` file:
 
     - hosts: servers
       roles:
-         - { role: aria2, x: 42 }
+        - role: aria2
+          rpc_user: username
+          rpc_password: password
 
 
 ## Build
