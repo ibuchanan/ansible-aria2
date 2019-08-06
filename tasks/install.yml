@@ -1,0 +1,7 @@
+---
+# File: install.yml - Install aria2 package
+
+- name: install aria2
+  become: true
+  package:
+    name: aria2
